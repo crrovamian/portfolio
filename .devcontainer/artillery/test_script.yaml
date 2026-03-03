@@ -1,0 +1,56 @@
+config:
+    target: "http://172.17.0.1:3000"
+    phases:
+      - duration: 30        # prueba durante 30 segundos
+        arrivalRate: 10     # simula 10 usuarios por segundo
+        name: "Carga estable"
+    processor: "./functions.js"
+
+scenarios:
+    - name: "Prueba de saludo"
+      flow:
+        - get:
+            url: "/"
+
+    # - name: "GET con paginación"
+    #   flow:
+    #     - loop:
+    #         count: 5
+    #         foreach:
+    #           - get:
+    #               url: "/api/items?page={{ $loopElement }}"
+    #       over:
+    #         - 1
+    #         - 2
+    #         - 3
+    #         - 4
+    #         - 5
+
+    # - name: "POST para crear un recurso"
+    #   flow:
+    #     - post:
+    #         url: "/api/items"
+    #         json:
+    #           nombre: "Item {{ $randomInt(1, 1000) }}"
+    #           precio: "{{ $randomInt(10, 100) }}"
+
+    - name: "Login y uso de token"
+      flow:
+        - post:
+            url: "/auth/login"
+            json:
+              username: "test"
+              password: "test"
+            afterResponse: "guardarToken"
+
+        - get:
+            url: "/auth/profile"
+            headers:
+              Authorization: "Bearer {{ token }}"
+
+        # - post:
+        #     url: "/api/privado/crear"
+        #     headers:
+        #       Authorization: "Bearer {{ token }}"
+        #     json:
+        #       nombre: "Artículo secreto"

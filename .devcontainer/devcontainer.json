@@ -1,0 +1,7 @@
+{
+	"name": "dev portfolio",
+	"dockerComposeFile": "./compose.yml",
+	"service": "portfolio",
+	"workspaceFolder": "/api",
+	"shutdownAction": "stopCompose"
+}
