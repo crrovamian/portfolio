@@ -29,15 +29,17 @@ jobs:
           cache: "pnpm"
 
       - name: Install dependencies
+        working-directory: portfolio
         run: pnpm install
 
       - name: Build project
+        working-directory: portfolio
         run: pnpm run build
 
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
         with:
-          path: ./out
+          path: portfolio/out
 
   deploy:
     environment:
