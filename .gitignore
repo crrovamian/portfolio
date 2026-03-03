@@ -6,6 +6,7 @@ yarn-error.log
 /databases
 .pnpm-store
 
+opencode/
 # Logs
 logs/
 *.log
