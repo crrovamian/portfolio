@@ -38,6 +38,8 @@ jobs:
 
       - name: Build project
         working-directory: portfolio
+        env:
+          NEXT_PUBLIC_REPO_NAME: ${{ github.event.repository.name }}
         run: pnpm run build
 
       - name: Upload artifact
