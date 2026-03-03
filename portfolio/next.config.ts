@@ -4,8 +4,7 @@ const repoName = "portfolio";
 
 const nextConfig: NextConfig = {
   output: "export",
-  basePath: `/${repoName}`,
-  // assetPrefix: `/${repoName}`,
+  basePath: `/${repoName}`
 };
 
 export default nextConfig;
