@@ -110,10 +110,19 @@ export default function ProjectPageClient({ project, slug }: ProjectPageClientPr
             </div>
           </div>
 
-          {!project.private && !project.unavailable && (
+          {project.repos && project.repos.length > 0 && (
             <div className="animate-in flex gap-4 mb-16">
-              <a href="#" className="btn-primary">VER DEMO →</a>
-              <a href="#" className="btn-secondary">GITHUB →</a>
+              {project.repos.map((repo) => (
+                <a 
+                  key={repo.name} 
+                  href={repo.url} 
+                  target="_blank" 
+                  rel="noopener noreferrer" 
+                  className="btn-secondary"
+                >
+                  {repo.name.toUpperCase()} →
+                </a>
+              ))}
             </div>
           )}
 
