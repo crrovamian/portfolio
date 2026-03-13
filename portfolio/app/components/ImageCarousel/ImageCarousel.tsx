@@ -3,6 +3,7 @@
 import { useState, useEffect, useCallback } from 'react';
 import Image from 'next/image';
 import styles from './ImageCarousel.module.css';
+import { BASE_PATH } from '@/app/environments';
 
 interface ImageCarouselProps {
   images: string[];
@@ -42,15 +43,15 @@ export function ImageCarousel({ images, alt = 'Project image' }: ImageCarouselPr
   }
 
   return (
-    <div 
-      className={styles.carousel} 
+    <div
+      className={styles.carousel}
       tabIndex={0}
       role="region"
       aria-label="Image carousel"
     >
       <div className={styles.imageContainer}>
         <Image
-          src={images[currentIndex]}
+          src={BASE_PATH + images[currentIndex]}
           alt={`${alt} ${currentIndex + 1} of ${images.length}`}
           fill
           className={styles.image}
@@ -81,9 +82,8 @@ export function ImageCarousel({ images, alt = 'Project image' }: ImageCarouselPr
               <button
                 key={index}
                 onClick={() => goToIndex(index)}
-                className={`${styles.indicator} ${
-                  index === currentIndex ? styles.indicatorActive : ''
-                }`}
+                className={`${styles.indicator} ${index === currentIndex ? styles.indicatorActive : ''
+                  }`}
                 aria-label={`Go to image ${index + 1}`}
                 aria-current={index === currentIndex ? 'true' : 'false'}
               />
