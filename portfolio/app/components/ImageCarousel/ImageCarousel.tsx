@@ -42,6 +42,13 @@ export function ImageCarousel({ images, alt = 'Project image' }: ImageCarouselPr
     return null;
   }
 
+  const getImagePath = (path: string) => {
+    if (BASE_PATH) {
+      return `/${BASE_PATH}${path}`;
+    }
+    return path;
+  };
+
   return (
     <div
       className={styles.carousel}
@@ -51,7 +58,7 @@ export function ImageCarousel({ images, alt = 'Project image' }: ImageCarouselPr
     >
       <div className={styles.imageContainer}>
         <Image
-          src={BASE_PATH + images[currentIndex]}
+          src={getImagePath(images[currentIndex])}
           alt={`${alt} ${currentIndex + 1} of ${images.length}`}
           fill
           className={styles.image}
