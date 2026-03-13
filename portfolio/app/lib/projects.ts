@@ -12,6 +12,7 @@ export interface Project {
   unavailable?: boolean;
   repoUrl?: string;
   demoUrl?: string;
+  images?: string[];
 }
 
 export const projects: Project[] = [
@@ -23,7 +24,7 @@ export const projects: Project[] = [
     description: 'Sistema integral de gestión para centros turísticos con venta de tickets, control de acceso y reportes en tiempo real.',
     fullDescription: 'Plataforma integral para la gestión de centros turísticos que combina venta de tickets, control de acceso mediante códigos QR, inventario de productos y análisis de datos en tiempo real. Diseñado para escalar y manejar alto volumen de transacciones.',
     tech: ['Next.js', 'PostgreSQL', 'Stripe', 'QR Scanner', 'Redis'],
-    year: '2025',
+    year: '2026',
     features: [
       'Sistema de venta de tickets online y presencial',
       'Control de acceso con scanner QR',
@@ -31,6 +32,17 @@ export const projects: Project[] = [
       'Gestión de inventario de productos',
       'Reportes y analíticas avanzadas',
       'Integración con pasarelas de pago',
+    ],
+    images: [
+      '/projects/managementsystem01.jpg',
+      '/projects/managementsystem02.jpg',
+      '/projects/managementsystem03.jpg',
+      '/projects/managementsystem04.jpg',
+      '/projects/managementsystem05.jpg',
+      '/projects/managementsystem06.jpg',
+      '/projects/managementsystem07.jpg',
+      '/projects/managementsystem08.jpg',
+      '/projects/managementsystem09.jpg',
     ],
   },
   {

@@ -1,0 +1,106 @@
+.carousel {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  background: #18181b;
+  border-radius: 8px;
+  overflow: hidden;
+  outline: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.carousel:focus {
+  outline: 2px solid #84cc16;
+  outline-offset: 2px;
+}
+
+.imageContainer {
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+
+.image {
+  object-fit: contain;
+  transition: opacity 0.4s ease-in-out;
+}
+
+.navButton {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 48px;
+  height: 48px;
+  background: rgba(0, 0, 0, 0.6);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  border-radius: 50%;
+  color: white;
+  font-size: 20px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.2s ease;
+  left: 16px;
+  z-index: 10;
+}
+
+.navButton:hover {
+  background: rgba(132, 204, 22, 0.8);
+  border-color: #84cc16;
+}
+
+.navButtonNext {
+  left: auto;
+  right: 16px;
+}
+
+.indicators {
+  position: absolute;
+  bottom: 16px;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  gap: 8px;
+  z-index: 10;
+}
+
+.indicator {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.4);
+  border: none;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  padding: 0;
+}
+
+.indicator:hover {
+  background: rgba(255, 255, 255, 0.7);
+}
+
+.indicatorActive {
+  background: #84cc16;
+  transform: scale(1.2);
+}
+
+@media (max-width: 640px) {
+  .navButton {
+    width: 40px;
+    height: 40px;
+    font-size: 16px;
+    left: 8px;
+  }
+
+  .navButtonNext {
+    right: 8px;
+  }
+
+  .indicator {
+    width: 8px;
+    height: 8px;
+  }
+}

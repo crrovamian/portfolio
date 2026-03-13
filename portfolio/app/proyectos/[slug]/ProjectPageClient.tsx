@@ -10,6 +10,7 @@ import { Footer } from '@/app/components/Footer';
 import { TechBadge } from '@/app/components/TechBadge';
 import { FeatureItem } from '@/app/components/FeatureItem';
 import { ProjectCardLink } from '@/app/components/ProjectCardLink';
+import { ImageCarousel } from '@/app/components/ImageCarousel';
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -78,6 +79,12 @@ export default function ProjectPageClient({ project, slug }: ProjectPageClientPr
           <p className="animate-in text-xl text-zinc-500 uppercase tracking-wider mb-8">
             {project.subtitle}
           </p>
+
+          {project.images && project.images.length > 0 && (
+            <div className="animate-in mb-12">
+              <ImageCarousel images={project.images} alt={project.title} />
+            </div>
+          )}
 
           <div className="animate-in mb-12">
             <p className="text-zinc-300 leading-relaxed text-xl">
