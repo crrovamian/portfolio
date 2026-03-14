@@ -16,6 +16,22 @@ export interface Project {
 
 export const projects: Project[] = [
   {
+    id: 6,
+    slug: 'springboot-kafka-saga-example',
+    title: 'springboot-kafka-saga-example',
+    subtitle: 'springboot-kafka-saga-example',
+    description: 'springboot-kafka-saga-example',
+    fullDescription: 'springboot-kafka-saga-example',
+    tech: ['SpringBoot', 'Apache Kafka', 'Docker', 'OpenApi'],
+    year: '2026',
+    features: [
+      'SAGA',
+    ],
+    repos: [
+      { name: 'GITHUB', url: 'https://github.com/crrovamian/springboot-kafka-saga-example' },
+    ],
+  },
+  {
     id: 5,
     slug: 'portfolio',
     title: 'Portfolio Personal',
