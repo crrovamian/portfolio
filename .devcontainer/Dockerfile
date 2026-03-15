@@ -16,6 +16,7 @@ RUN mkdir /opt/pnpm-store
 RUN pnpm config set store-dir /opt/pnpm-store
 RUN pnpm install -g opencode-ai
 RUN pnpm install -g @fission-ai/openspec@latest
+RUN brew install gh
 # RUN pnpm add @dbml/cli -g 
 # RUN pnpm add @softwaretechnik/dbml-renderer -g
 RUN nvim --headless "+Lazy! sync" +qa # Instala plugins base

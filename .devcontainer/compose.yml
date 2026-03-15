@@ -30,3 +30,4 @@ services:
       SSH_AUTH_SOCK: /ssh-agent
       WAYLAND_DISPLAY: ${WAYLAND_DISPLAY}
       XDG_RUNTIME_DIR: ${XDG_RUNTIME_DIR}
+      GH_TOKEN: ${GH_TOKEN}
