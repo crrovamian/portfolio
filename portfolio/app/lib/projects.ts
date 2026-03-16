@@ -17,24 +17,24 @@ export interface Project {
 export const projects: Project[] = [
   {
     id: 7,
-    slug: 'argocd-example',
-    title: 'argocd-example',
-    subtitle: 'Ejemplo de despliegue con ArgoCD',
-    description: 'Guía completa de instalación de ArgoCD y ejemplo de despliegue con GitOps',
-    fullDescription: 'Repositorio de ejemplo que contiene una guía completa para instalar y configurar ArgoCD en un cluster Kubernetes. Incluye instrucciones paso a paso para el despliegue inicial, configuración de credenciales y acceso a la UI. El proyecto implementa un ejemplo práctico de GitOps desplegando una aplicación Nginx con HTML dinámico que muestra información del pod (hostname e IP). Soporta Ingress con Traefik y Nginx, y está preparado para funcionar con Minikube en entorno local.',
+    slug: 'argocd-deployment',
+    title: 'ArgoCD Deployment',
+    subtitle: 'Despliegue con ArgoCD y GitOps',
+    description: 'Guía completa de instalación de ArgoCD y despliegue con GitOps',
+    fullDescription: 'Repositorio que contiene una guía completa para instalar y configurar ArgoCD en un cluster Kubernetes. Incluye instrucciones paso a paso para el despliegue inicial, configuración de credenciales y acceso a la UI. El proyecto implementa un flujo práctico de GitOps desplegando una aplicación Nginx con HTML dinámico que muestra información del pod (hostname e IP). Soporta Ingress con Traefik y Nginx, y está preparado para funcionar con Minikube en entorno local.',
     tech: ['ArgoCD', 'Kubernetes', 'GitOps', 'Nginx', 'Traefik', 'Minikube'],
     year: '2026',
     features: [
       'Guía de instalación de ArgoCD paso a paso',
       'Configuración de credenciales iniciales',
       'Acceso a UI mediante port-forward',
-      'Ejemplo de aplicación con HTML dinámico',
+      'Aplicación con HTML dinámico',
       'Soporte para Ingress con Traefik y Nginx',
       'Flujo completo de GitOps',
       'Compatible con Minikube para desarrollo local',
     ],
     repos: [
-      { name: 'GITHUB', url: 'https://github.com/crrovamian/argocd-example' },
+      { name: 'GITHUB', url: 'https://github.com/crrovamian/argocd-deployment' },
     ],
   },
   {
