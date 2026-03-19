@@ -9,7 +9,6 @@ export interface Project {
   year: string;
   features: string[];
   private?: boolean;
-  unavailable?: boolean;
   repos?: { name: string; url: string }[];
   images?: string[];
 }
@@ -110,7 +109,7 @@ export const projects: Project[] = [
     title: 'Citas Médicas',
     subtitle: 'Plataforma de Gestión Médica',
     description: 'Plataforma de gestión de citas médicas con agenda digital, recordatorios automáticos y historial de pacientes.',
-    fullDescription: 'Sistema integral para clínicas y consultorios médicos. Permite el registro de médicos y pacientes, con lista de médicos por especialidad y disponibilidad horaria. Los doctores pueden gestionar su agenda del día, mientras que los pacientes visualizan sus propias citas. Incluye autenticación con roles diferenciados (doctor/paciente), agenda digital en tiempo real, recordatorios automáticos por SMS/email, historial clínico digital, gestión de recetas médicas y video-consultas integradas.',
+    fullDescription: 'Sistema para clínicas y consultorios médicos. Permite el registro de médicos y pacientes, con lista de médicos por especialidad y disponibilidad horaria. Los doctores pueden gestionar su agenda del día, mientras que los pacientes visualizan sus propias citas. Incluye autenticación con roles diferenciados (doctor/paciente) y agenda digital en tiempo real.',
     tech: ['Angular', 'Nest', 'PostgreSQL', 'JWT', 'SpringBoot', 'SpringSecurity', 'Java', 'Testing', 'TypeScript', 'Docker', 'Jenkins', 'Hexagonal'],
     year: '2025',
     features: [
@@ -119,10 +118,6 @@ export const projects: Project[] = [
       'Agenda diaria para doctores',
       'Visualización de citas para pacientes',
       'Autenticación con roles (doctor/paciente)',
-      'Agenda digital en tiempo real',
-      'Recordatorios automáticos por SMS/email',
-      'Historial clínico digital y gestión de recetas',
-      'Video-consultas integradas',
     ],
     repos: [
       { name: 'FRONTEND', url: 'https://github.com/efbsplexusteam/plexsalud-frontend-angular' },
@@ -173,7 +168,6 @@ export const projects: Project[] = [
       'Reportes financieros y control de gastos por parcela',
       'Pronóstico de producción',
     ],
-    unavailable: true,
   },
 ];
 

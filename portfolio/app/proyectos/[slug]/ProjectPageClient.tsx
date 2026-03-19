@@ -68,9 +68,6 @@ export default function ProjectPageClient({ project, slug }: ProjectPageClientPr
             {project.private && (
               <span className="badge-private">Privado</span>
             )}
-            {project.unavailable && (
-              <span className="badge-unavailable">Repo no disponible</span>
-            )}
           </div>
 
           <h1 className="animate-in text-5xl md:text-7xl font-black tracking-tighter mb-2 leading-none">
@@ -104,8 +101,8 @@ export default function ProjectPageClient({ project, slug }: ProjectPageClientPr
           <div className="animate-in mb-16">
             <h2 className="section-title mb-6">Características</h2>
             <div className="grid md:grid-cols-2 gap-4">
-              {project.features.map((feature: string, i: number) => (
-                <FeatureItem key={i} feature={feature} index={i} />
+              {project.features.map((feature: string) => (
+                <FeatureItem key={feature} feature={feature} />
               ))}
             </div>
           </div>
@@ -130,14 +127,6 @@ export default function ProjectPageClient({ project, slug }: ProjectPageClientPr
             <div className="animate-in notice-box mb-16">
               <p className="text-zinc-500 font-mono text-sm">
                 Este proyecto está bajo acuerdo de confidencialidad y no puede ser compartido públicamente.
-              </p>
-            </div>
-          )}
-
-          {project.unavailable && (
-            <div className="animate-in notice-box mb-16">
-              <p className="text-zinc-500 font-mono text-sm">
-                El repositorio se perdió, pero el proyecto fue deployed y está en producción.
               </p>
             </div>
           )}

@@ -22,11 +22,6 @@ export function ProjectCard({ project, index }: ProjectCardProps) {
                 Privado
               </span>
             )}
-            {project.unavailable && (
-              <span className="badge-unavailable">
-                Repo no disponible
-              </span>
-            )}
           </div>
 
           <h3 className="text-3xl md:text-4xl font-black tracking-tight mb-1 group-hover:text-lime-400 transition-colors">
@@ -53,7 +48,7 @@ export function ProjectCard({ project, index }: ProjectCardProps) {
           <span className="font-mono text-4xl lg:text-5xl font-black text-zinc-700 group-hover:text-zinc-500 transition-colors">
             {project.year}
           </span>
-          {!project.private && !project.unavailable && (
+          {!project.private && (
             <span className="lg:opacity-0 group-hover:opacity-100 transition-opacity text-lime-400 text-sm font-mono">
               VER →
             </span>
