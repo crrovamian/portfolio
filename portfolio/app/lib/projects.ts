@@ -39,18 +39,18 @@ export const projects: Project[] = [
   },
   {
     id: 6,
-    slug: 'springboot-kafka-saga-example',
-    title: 'springboot-kafka-saga-example',
-    subtitle: 'springboot-kafka-saga-example',
-    description: 'springboot-kafka-saga-example',
-    fullDescription: 'springboot-kafka-saga-example',
+    slug: 'springboot-kafka-saga',
+    title: 'springboot-kafka-saga',
+    subtitle: 'springboot-kafka-saga',
+    description: 'springboot-kafka-saga',
+    fullDescription: 'springboot-kafka-saga',
     tech: ['SpringBoot', 'Apache Kafka', 'Docker', 'OpenApi'],
     year: '2026',
     features: [
       'SAGA',
     ],
     repos: [
-      { name: 'GITHUB', url: 'https://github.com/crrovamian/springboot-kafka-saga-example' },
+      { name: 'GITHUB', url: 'https://github.com/crrovamian/springboot-kafka-saga' },
     ],
   },
   {
