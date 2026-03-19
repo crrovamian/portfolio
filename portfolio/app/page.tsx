@@ -133,9 +133,6 @@ export default function Portfolio() {
 
         <div className="animate-item flex gap-4">
           <div className="badge-stats">
-            <span className="text-lime-400">▶</span> 5 PROYECTOS
-          </div>
-          <div className="badge-stats">
             <span className="text-yellow-400">⚡</span> FULLSTACK
           </div>
         </div>
@@ -153,7 +150,7 @@ export default function Portfolio() {
                 Miguel Cruz
               </h3>
               <p className="text-zinc-400 text-lg leading-relaxed mb-6">
-                Desarrollador fullstack con experiencia en el ecosistema Angular/NestJS. 
+                Desarrollador fullstack con experiencia en desarrollo web. 
                 Enfoque práctico orientado a resolver problemas reales con código mantenible.
               </p>
               <p className="text-zinc-400 text-lg leading-relaxed">

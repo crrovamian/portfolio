@@ -17,9 +17,6 @@ export function ProjectCard({ project, index }: ProjectCardProps) {
       <div className="p-6 md:p-10 flex flex-col lg:flex-row lg:items-center lg:justify-between gap-6">
         <div className="flex-1">
           <div className="flex items-center gap-3 mb-3">
-            <span className="font-mono text-lime-400 text-sm">
-              {String(index + 1).padStart(2, '0')}
-            </span>
             {project.private && (
               <span className="badge-private">
                 Privado
