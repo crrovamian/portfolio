@@ -12,6 +12,8 @@ gsap.registerPlugin(ScrollTrigger);
 export default function Portfolio() {
   const containerRef = useRef<HTMLDivElement>(null);
   const headerRef = useRef<HTMLDivElement>(null);
+  const aboutRef = useRef<HTMLDivElement>(null);
+  const interestsRef = useRef<HTMLDivElement>(null);
   const projectsRef = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
@@ -44,6 +46,37 @@ export default function Portfolio() {
           ease: 'power3.out',
           scrollTrigger: {
             trigger: projectsRef.current,
+            start: 'top 80%',
+          },
+        }
+      );
+
+      gsap.fromTo(
+        '.about-content',
+        { y: 60, opacity: 0 },
+        {
+          y: 0,
+          opacity: 1,
+          duration: 1,
+          ease: 'power3.out',
+          scrollTrigger: {
+            trigger: aboutRef.current,
+            start: 'top 75%',
+          },
+        }
+      );
+
+      gsap.fromTo(
+        '.interest-card',
+        { y: 40, opacity: 0, scale: 0.95 },
+        {
+          y: 0,
+          opacity: 1,
+          duration: 0.6,
+          stagger: 0.1,
+          ease: 'power3.out',
+          scrollTrigger: {
+            trigger: interestsRef.current,
             start: 'top 80%',
           },
         }
@@ -94,8 +127,8 @@ export default function Portfolio() {
         </h1>
 
         <p className="animate-item header-description">
-          Construcción de soluciones digitales robustas.{' '}
-          <span className="text-zinc-600">/</span>/ ERP, apps médicas, plataformas de video y más.
+          Desarrollo de aplicaciones web.{' '}
+          <span className="text-zinc-600">/</span>/ Sistemas de gestión, apps y más.
         </p>
 
         <div className="animate-item flex gap-4">
@@ -107,6 +140,63 @@ export default function Portfolio() {
           </div>
         </div>
       </header>
+
+      <section ref={aboutRef} className="about-section">
+        <div className="section-header">
+          <div className="section-line" />
+          <h2 className="section-title">Sobre Mí</h2>
+        </div>
+        <div className="about-content px-6 md:px-16 lg:px-24 pb-32">
+          <div className="grid md:grid-cols-2 gap-12">
+            <div>
+              <h3 className="text-3xl md:text-4xl font-black mb-6 tracking-tight">
+                Miguel Cruz
+              </h3>
+              <p className="text-zinc-400 text-lg leading-relaxed mb-6">
+                Desarrollador fullstack con experiencia en el ecosistema Angular/NestJS. 
+                Enfoque práctico orientado a resolver problemas reales con código mantenible.
+              </p>
+              <p className="text-zinc-400 text-lg leading-relaxed">
+                Lleva proyectos desde el desarrollo hasta su despliegue en producción, 
+                siempre con ojo en la escalabilidad y la mantenibilidad.
+              </p>
+            </div>
+            <div className="grid grid-cols-2 gap-4">
+              <div className="stat-card">
+                <span className="text-4xl font-black text-lime-400">5+</span>
+                <span className="text-zinc-500 text-sm font-mono uppercase tracking-wider">Años de experiencia</span>
+              </div>
+              <div className="stat-card">
+                <span className="text-4xl font-black text-yellow-400">∞</span>
+                <span className="text-zinc-500 text-sm font-mono uppercase tracking-wider">Curiosidad</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section ref={interestsRef} className="interests-section">
+        <div className="section-header px-6 md:px-16 lg:px-24">
+          <div className="section-line" />
+          <h2 className="section-title">Stack</h2>
+        </div>
+        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-4 px-6 md:px-16 lg:px-24 pb-32">
+          {[
+            { icon: '⚡', title: 'Frontend', desc: 'Angular, React, Next.js, TypeScript, Thymeleaf' },
+            { icon: '🔧', title: 'Backend', desc: 'NestJS, Spring Boot, Node.js, Express' },
+            { icon: '💾', title: 'Bases de Datos', desc: 'PostgreSQL, MongoDB, Redis' },
+            { icon: '🐳', title: 'DevOps', desc: 'Docker, Kubernetes, ArgoCD, Terraform, Jenkins, CI/CD' },
+            { icon: '☁️', title: 'Cloud', desc: 'AWS EC2, AWS S3, despliegue en producción' },
+            { icon: '🧪', title: 'Testing', desc: 'Pruebas unitarias en frontend' },
+          ].map((interest, i) => (
+            <div key={i} className="interest-card">
+              <span className="text-3xl mb-4 block">{interest.icon}</span>
+              <h4 className="text-xl font-bold mb-2">{interest.title}</h4>
+              <p className="text-zinc-500 text-sm leading-relaxed">{interest.desc}</p>
+            </div>
+          ))}
+        </div>
+      </section>
 
       <section ref={projectsRef} className="projects-section">
         <div className="section-header">

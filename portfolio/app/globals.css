@@ -184,3 +184,21 @@ body {
 .animate-in {
   @apply opacity-0;
 }
+
+/* About Section */
+.about-section {
+  @apply bg-zinc-950;
+}
+
+.stat-card {
+  @apply p-6 bg-zinc-900 border border-zinc-800 flex flex-col gap-2;
+}
+
+/* Interests Section */
+.interests-section {
+  @apply pb-16;
+}
+
+.interest-card {
+  @apply p-8 bg-zinc-900 border border-zinc-800 hover:border-lime-400/50 transition-colors duration-300;
+}
