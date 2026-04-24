@@ -180,11 +180,13 @@ export default function Portfolio() {
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-4 px-6 md:px-16 lg:px-24 pb-32">
           {[
             { icon: '⚡', title: 'Frontend', desc: 'Angular, React, Next.js, TypeScript, Thymeleaf' },
-            { icon: '🔧', title: 'Backend', desc: 'NestJS, Spring Boot, Node.js, Express' },
-            { icon: '💾', title: 'Bases de Datos', desc: 'PostgreSQL, MongoDB, Redis' },
+            { icon: '🔧', title: 'Backend', desc: 'NestJS, Spring Boot, Node.js, Express, FastAPI' },
+            { icon: '💾', title: 'Bases de Datos', desc: 'PostgreSQL, MongoDB, Redis, ChromaDB' },
             { icon: '🐳', title: 'DevOps', desc: 'Docker, Kubernetes, ArgoCD, Terraform, Jenkins, CI/CD' },
+            { icon: '📨', title: 'Streaming', desc: 'Apache Kafka' },
             { icon: '☁️', title: 'Cloud', desc: 'AWS EC2, AWS S3, despliegue en producción' },
             { icon: '🧪', title: 'Testing', desc: 'Pruebas unitarias en frontend' },
+            { icon: '🤖', title: 'IA', desc: 'LangGraph, LangChain, Langfuse' },
           ].map((interest, i) => (
             <div key={i} className="interest-card">
               <span className="text-3xl mb-4 block">{interest.icon}</span>
