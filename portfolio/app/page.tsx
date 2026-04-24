@@ -185,7 +185,7 @@ export default function Portfolio() {
             { icon: '🐳', title: 'DevOps', desc: 'Docker, Kubernetes, ArgoCD, Terraform, Jenkins, CI/CD' },
             { icon: '📨', title: 'Streaming', desc: 'Apache Kafka' },
             { icon: '☁️', title: 'Cloud', desc: 'AWS EC2, AWS S3, despliegue en producción' },
-            { icon: '🧪', title: 'Testing', desc: 'Pruebas unitarias en frontend' },
+            { icon: '🧪', title: 'Testing', desc: 'JUnit, Mockito (Java) • Jest, Vitest (TypeScript) • Pytest (Python) • SonarQube' },
             { icon: '🤖', title: 'IA', desc: 'LangGraph, LangChain, Langfuse' },
           ].map((interest, i) => (
             <div key={i} className="interest-card">
